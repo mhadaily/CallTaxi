@@ -1,0 +1,693 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="MobileOptimized" content="320"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="./img/touch/chrome-touch-icon-192x192.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon-precomposed.png">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="./img/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+  <title>Home | Call Taxi</title>
+  <link rel="icon" href="#" type="image/x-icon">
+  <!-- For third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#">
+  <!-- For iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="#">
+  <!-- For first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="#">
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="#">
+  <link href="./css/app.css" rel="stylesheet"/>
+  <link href="./css/pace-theme-center-circle.css" rel="stylesheet"/>
+  <link href="./css/fontawesome/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="./css/responsive-utils.css" rel="stylesheet"/>
+  <script src="./js/modernizr.min.js"></script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body role="document" class="home_page" onload="init()">
+<!--[if lt IE 9]>
+<div class="browsehappy">
+  <p>
+    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google
+    Chrome Frame</a> to improve your experience.
+  </p>
+</div>
+<![endif]-->
+<div class="body-cover"></div>
+<header role="banner">
+  <div class="container text-center">
+    <div class="logo-holder">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 137 43" enable-background="new 0 0 137 43" xml:space="preserve">
+          <g>
+            <image id="logo_img" style="overflow:visible;" width="137" height="43" xlink:href="img/logo.png"></image>
+            <path id="rect" class="st0" d="M0,0 l137,0 0,43 -137,0 0,-43" />
+          </g>
+        </svg>
+    </div>
+  </div>
+</header>
+<button type="button" class="btn btn-default btn-lg sm-hide" id="toggle_menu">
+  <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+</button>
+<nav role="navigation">
+  <ul class="main_menu">
+    <li role="presentation" class="active"><a href="#scene_2">How it works</a></li>
+    <li role="presentation"><a href="#scene_3">Book Now</a></li>
+    <li role="presentation"><a href="#scene_5">Download App</a></li>
+    <li role="presentation"><a href="#scene_map">Locations</a></li>
+    <li role="presentation"><a href="#scene_6">Services</a></li>
+    <li role="presentation"><a href="#scene_7">Blog</a></li>
+    <li role="presentation"><a href="#scene_8">Contact Us</a></li>
+  </ul>
+</nav>
+<div class="lower_menu sm-visible">
+  <button type="button" class="btn btn-default btn-lg" id="toggle_menu_lower">
+    <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+  </button>
+  <nav role="navigation" id="main_menu_lower">
+    <ul class="main_menu">
+      <li role="presentation" class="active"><a href="#scene_2">How it works</a></li>
+      <li role="presentation"><a href="#scene_3">Book Now</a></li>
+      <li role="presentation"><a href="#scene_5">Download App</a></li>
+      <li role="presentation"><a href="#scene_map">Locations</a></li>
+      <li role="presentation"><a href="#scene_6">Services</a></li>
+      <li role="presentation"><a href="#scene_7">Blog</a></li>
+      <li role="presentation"><a href="#scene_8">Contact Us</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="slogan">
+  <h1>WE TAKE YOU ON TIME AND AT THE RIGHT PLACE!</h1>
+  <h3>FAST & SAFE WITH THE RIGHT PRICES</h3>
+</div>
+<section class="scene_1" id="scene_1">
+  <div class="scene_1_buildings"></div>
+  <div class="scene_1_mobile"></div>
+  <div class="scene_1_taxi_small"></div>
+  <div class="scene_1_houses"></div>
+  <div class="scene_1_taxi_big"></div>
+</section>
+<section class="scene_2" id="scene_2">
+  <header>
+    <hgroup>
+      <h1 class="heading-text caps text-white text-lite margin-b-lg">Package Delivery & Online Booking</h1>
+      <button type="button" class="btn btn-default btn-lg caps">Book Your Taxi Now</button>
+    </hgroup>
+  </header>
+  <main>
+    <div class="container">
+      <div class="cars">
+        <img src="img/scene_2/1.png" alt="cars" id="car_1" class="relative img-responsive">
+        <img src="img/scene_2/2.png" alt="cars" id="car_2" class="absolute img-responsive">
+        <img src="img/scene_2/3.png" alt="cars" id="car_3" class="absolute img-responsive">
+        <img src="img/scene_2/4.png" alt="cars" id="car_4" class="absolute img-responsive">
+      </div>
+      <h1 class="headings margin-t-no margin-b-xlg">How it works</h1>
+      <div class="row relative">
+        <div class="single_car hidden-xs">
+          <div class="scene_holder">
+            <div class="scene_2_line"></div>
+            <img src="img/scene_2/single_car.png" class="absolute img-responsive" id="scene_2_car_on_line">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <article class="article_left">
+            <figure>
+              <img src="img/scene_2/phone_1.png">
+            </figure>
+            <hgroup>
+              <h1 class="sm-margin-t-no text-bold caps">it's that simple!</h1>
+              <h3 class="text-lite">You will receive the confirmation and the
+                <span class="lg-block">estimated time of arriving your taxi and</span>
+                the name of the driver after a few seconds.</h3>
+            </hgroup>
+          </article>
+        </div>
+        <div class="col-sm-6">
+          <article class="article_right">
+            <h1 class="sm-margin-t-no text-bold caps">Book in few seconds</h1>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="img/scene_2/thumb_1.png"> 1- Enter the pick up address
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/scene_2/thumb_2.png"> 2- Enter your name
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/scene_2/thumb_3.png"> 3- Select a time
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/scene_2/thumb_4.png"> 4- Enter your phone number
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/scene_2/thumb_5.png"> 5- Send your request
+                </a>
+              </li>
+            </ul>
+            <figure>
+              <img src="img/scene_2/phone_2.png">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+<section class="scene_3" id="scene_3">
+  <div class="container">
+    <hgroup>
+      <h1 class="headings margin-b-lg">Book now</h1>
+      <h2>Where do you want to be picked up from?</h2>
+      <h4>Please fill in the form below or locate yourself on the map.</h4>
+    </hgroup>
+    <form role="form">
+      <div class="form_block">
+        <input type="text" class="form-group input-lg" placeholder="Your Address"/>
+        <img src="img/scene_3/thumb_1.png">
+      </div>
+      <div class="form_block">
+        <div class="form_block_1">
+          <input type="text" class="form-group input-lg" placeholder="Unit Number"/>
+          <img src="img/scene_3/thumb_2.png">
+        </div>
+        <div class="form_block_2">
+          <input type="text" class="form-group input-lg" placeholder="Your Name"/>
+          <img src="img/scene_3/thumb_3.png">
+        </div>
+      </div>
+      <div class="form_block">
+        <div class="form_block_1">
+          <input type="text" class="form-group input-lg" placeholder="Now"/>
+          <img src="img/scene_3/thumb_4.png">
+        </div>
+        <div class="form_block_2">
+          <input type="text" class="form-group input-lg" placeholder="Later"/>
+          <img src="img/scene_3/thumb_5.png">
+        </div>
+      </div>
+      <div class="form_block">
+        <div class="form_block_1">
+          <input type="text" class="form-group input-lg" placeholder="Your Phone Number"/>
+          <img src="img/scene_3/thumb_6.png">
+        </div>
+        <div class="form_block_2 sm-text-left sm-below-margin-b-sm">
+          <button type="button" class="btn btn-primary btn-lg">
+            CALL TAXI
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="car_scene relative">
+    <div class="scene_3_houses"></div>
+    <div class="scene_3_car"></div>
+  </div>
+</section>
+<div class="scene_4" id="scene_4">
+  <div class="scene_4_house"></div>
+  <div class="scene_4_car"></div>
+  <h1>24 HOURS RELIABLE SERVICE</h1>
+</div>
+<div class="scene_5" id="scene_5">
+  <div class="container relative">
+    <h1 class="headings margin-t-no margin-b-xlg">Download App</h1>
+    <div class="row relative">
+      <div class="single_car hidden-xs">
+        <div class="scene_holder">
+          <div class="scene_5_line">
+            <img src="img/scene_5/line.png" class="img-responsive margin-t-lg">
+          </div>
+          <img src="img/scene_2/single_car.png" class="absolute img-responsive" id="scene_5_car_on_line">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <article class="article_left">
+          <img src="img/scene_5/phone.png">
+        </article>
+      </div>
+      <div class="col-sm-6">
+        <article class="article_right">
+          <h1>Download our App to:</h1>
+          <h3>Order your Taxi</h3>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing
+            <span class="lg-block">elit. Aliquam suscipit tellus nec tempor ultrices.</span>
+          </h4>
+          <h3>Watch Without the Wait</h3>
+          <h4>
+            Cras et urna neque. Cras et molestie magna.
+            <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+            <span class="lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+            elit. Aliquam suscipit tellus nec tempor ultrices.
+          </h4>
+          <button type="button" class="btn btn-primary btn-lg">DOWNLOAD APP</button>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="testimonials">
+  <div class="container relative">
+    <div class="quote">
+      <div class="avatar">
+        <img src="img/avatar.png">
+      </div>
+      <div class="info">
+        <h2>
+          Cras et urna neque. Cras et molestie magna.
+          <span class="md-block">Nullam vel velit ut purus consequat interdum.</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scene_map" id="scene_map">
+  <h1 class="headings margin-no">LOCATIONs</h1>
+  <div class="list-block">
+    <ul class="list-inline">
+      <li>
+        <a href="#">
+          <span class="number" id="scene_map_no_1">1500</span>
+          <span class="text-label">Drivers</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="number" id="scene_map_no_2">1500</span>
+          <span class="text-label">City Spots</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="number" id="scene_map_no_3">3200</span>
+          <span class="text-label">Employees</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="number" id="scene_map_no_4">2200</span>
+          <span class="text-label">Cars</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <button type="button" class="btn btn-primary btn-lg caps">Our Location on map</button>
+</div>
+<section class="scene_6" id="scene_6">
+  <div class="container relative">
+    <h1 class="headings margin-t-no margin-b-xlg">Services</h1>
+    <div class="row relative">
+      <div class="single_car hidden-xs">
+        <div class="scene_holder">
+          <div class="scene_2_line"></div>
+          <img src="img/scene_2/single_car.png" class="absolute img-responsive" id="scene_6_car_on_line">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="div_left">
+          <article id="service_article_1">
+            <hgroup>
+              <h3>Limousine</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <ul class="car-block">
+              <li>
+                <img src="img/scene_6/black_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/black_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/black_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/black_car.png" class="img-responsive">
+              </li>
+            </ul>
+          </article>
+          <article id="service_article_2">
+            <hgroup>
+              <h3>Luxury Taxi</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <ul class="car-block">
+              <li>
+                <img src="img/scene_6/green_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/green_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/green_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/green_car.png" class="img-responsive">
+              </li>
+            </ul>
+          </article>
+          <article id="service_article_3">
+            <hgroup>
+              <h3>Other Services</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="div_right">
+          <article id="service_article_4">
+            <hgroup>
+              <h3>Leasing</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <ul class="car-block">
+              <li>
+                <img src="img/scene_6/red_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/blue_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/lime_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/red_car.png" class="img-responsive">
+              </li>
+            </ul>
+          </article>
+          <article id="service_article_5">
+            <hgroup>
+              <h3>Budget Taxi</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <ul class="car-block">
+              <li>
+                <img src="img/scene_6/yellow_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/yellow_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/yellow_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/yellow_car.png" class="img-responsive">
+              </li>
+            </ul>
+          </article>
+          <article id="service_article_6">
+            <hgroup>
+              <h3>Airport Transfer</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <ul class="car-block">
+              <li>
+                <img src="img/scene_6/black_small_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/black_small_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/black_small_car.png" class="img-responsive">
+              </li>
+              <li>
+                <img src="img/scene_6/black_small_car.png" class="img-responsive">
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="scene_sms">
+  <div class="container">
+    <hgroup>
+      <h1 class="headings margin-t-no">SMS to book</h1>
+      <h4>Cras et urna neque. Cras et molestie magna.
+        <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+      </h4>
+    </hgroup>
+  </div>
+</section>
+<section class="scene_7" id="scene_7">
+  <div class="container relative">
+    <h1 class="headings margin-t-no margin-b-xlg">Blog</h1>
+    <div class="row relative">
+      <div class="single_car hidden-xs">
+        <div class="scene_holder">
+          <div class="scene_2_line"></div>
+          <img src="img/scene_2/single_car.png" class="absolute img-responsive" id="scene_7_car_on_line">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="div_left">
+          <article>
+            <header>March 21</header>
+            <figure>
+              <img src="img/scene_7/1.png" class="img-responsive">
+            </figure>
+            <hgroup>
+              <h3>New Drivers needed</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <p class="buttons">
+              <button type="button" class="btn btn-default btn-lg btn-read">Read More</button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/share.png">
+                <span class="btn-text block">Share</span>
+              </button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/like.png">
+                <span class="btn-text block">Like</span>
+              </button>
+            </p>
+          </article>
+          <article>
+            <header>March 21</header>
+            <figure>
+              <img src="img/scene_7/3.png" class="img-responsive">
+            </figure>
+            <hgroup>
+              <h3>Latest app’s features</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <p class="buttons">
+              <button type="button" class="btn btn-default btn-lg btn-read">Read More</button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/share.png">
+                <span class="btn-text block">Share</span>
+              </button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/like.png">
+                <span class="btn-text block">Like</span>
+              </button>
+            </p>
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="div_right">
+          <article>
+            <header>March 21</header>
+            <figure>
+              <img src="img/scene_7/2.png" class="img-responsive">
+            </figure>
+            <hgroup>
+              <h3>New spots in town</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <p class="buttons">
+              <button type="button" class="btn btn-default btn-lg btn-read">Read More</button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/share.png">
+                <span class="btn-text block">Share</span>
+              </button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/like.png">
+                <span class="btn-text block">Like</span>
+              </button>
+            </p>
+          </article>
+          <article>
+            <header>March 21</header>
+            <figure>
+              <img src="img/scene_7/4.png" class="img-responsive">
+            </figure>
+            <hgroup>
+              <h3>This week promo code</h3>
+              <h4>Cras et urna neque. Cras et molestie magna.
+                <span class="lg-block">Nullam vel velit ut purus consequat interdum.</span>
+              </h4>
+            </hgroup>
+            <p class="buttons">
+              <button type="button" class="btn btn-default btn-lg btn-read">Read More</button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/share.png">
+                <span class="btn-text block">Share</span>
+              </button>
+              <button type="button" class="btn btn-default btn-lg">
+                <img src="img/scene_7/like.png">
+                <span class="btn-text block">Like</span>
+              </button>
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="scene_thanks">
+  <div class="container">
+    <hgroup>
+      <h1>Thanks for <span class="sm-below-block">Riding With Us!</span>
+      </h1>
+      <h3>Hope you come back soon.</h3>
+    </hgroup>
+    <div class="cars">
+      <img src="img/scene_thanks/1.png" class="img-responsive relative">
+      <img src="img/scene_thanks/2.png" class="img-responsive absolute">
+      <img src="img/scene_thanks/3.png" class="img-responsive absolute">
+      <img src="img/scene_thanks/4.png" class="img-responsive absolute">
+      <img src="img/scene_thanks/5.png" class="img-responsive absolute">
+    </div>
+  </div>
+</section>
+<section class="scene_8" id="scene_8">
+  <div class="container relative">
+    <h1 class="headings margin-t-no margin-b-xlg">Contact Us</h1>
+    <form role="form">
+      <div class="form_block_1">
+        <div class="group_input">
+          <input type="text" class="form-control input-lg" placeholder="Name">
+          <input type="text" class="form-control input-lg" placeholder="Email">
+          <input type="text" class="form-control input-lg" placeholder="Subject">
+        </div>
+        <button type="button" class="btn btn-primary btn-lg caps md-visible">Submit</button>
+      </div>
+      <div class="form_block_2">
+        <textarea placeholder="Comment" class="form-control input-lg"></textarea>
+      </div>
+      <div class="form_block_3">
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <img src="img/twt.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/fb.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/yt.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/gplus.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/yahoo.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/pin.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/inst.png" class="img-responsive hover">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/lin.png" class="img-responsive hover">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </form>
+    <button type="button" class="btn btn-primary btn-lg caps md-hide md-below-margin-no">Submit</button>
+  </div>
+  <div class="road_scene">
+    <div class="buildings"></div>
+    <div class="houses"></div>
+    <div class="car_single"></div>
+  </div>
+</section>
+<!------------------------ SCRIPTS --------------------------------->
+<script src="./js/jquery.min.js"></script>
+<script>
+  $(window).load(function () {
+    $(".body-cover").fadeOut(2000);
+  })
+
+</script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/vendors/jquery.nicescroll.min.js"></script>
+<script src="./js/vendors/TweenMax.min.js"></script>
+<script src="./js/vendors/jquery.scrollmagic.min.js"></script>
+<script src="./js/vendors/jquery.scrollmagic.debug.js"></script>
+<script src="./js/vendors/countUp.min.js"></script>
+<script src="./js/vendors/pace.min.js"></script>
+<script src="./js/vendors/jQuery.resizeEnd.min.js"></script>
+<script src="./js/app.js"></script>
+<!------------------------ / SCRIPTS --------------------------------->
+</body>
+
+</html>
+
